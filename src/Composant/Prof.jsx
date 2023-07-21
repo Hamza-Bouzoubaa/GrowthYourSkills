@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Chat from './Chat';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import './Prof.css';
 
-
-
+  
 const professorsData = [
   {
     name: 'John Smith',
@@ -12,7 +13,6 @@ const professorsData = [
     language: 'french',
     classType: 'IT',
     image: 'https://anthropology.fas.harvard.edu/sites/projects.iq.harvard.edu/files/styles/profile_full/public/anthropology/files/comaroff_john_0_1.jpg?m=1623336730&itok=MokzmV_s',
-
   },
   {
     name: 'Emily Johnson',
@@ -51,9 +51,11 @@ const professorsData = [
   },
 ];
 
-const Filter = () => {
+const Prof = () => {
   const [classType, setClassType] = useState('');
   const [language, setLanguage] = useState('');
+
+  const { t } = useTranslation();
 
   const handleClassTypeChange = (event) => {
     setClassType(event.target.value);
@@ -76,51 +78,53 @@ const Filter = () => {
 
   return (
     <div className="container">
-      <h1 className="px-3 mb-5 mt-5 text-center">Find your prof</h1>
+      <h1 className="px-3 mb-5 mt-5 text-center">{t('Find your prof')}</h1>
       <div className="row">
-        <div className="col-lg-2 position-fixed start-0 p-3">
-          <div>
-            <div>
-              <label htmlFor="classType">Class Type:</label>
-              <select
-                id="classType"
-                value={classType}
-                onChange={handleClassTypeChange}
-                className="form-select"
-              >
-                <option value="">Select a class type</option>
-                <option value="IT">IT</option>
-                <option value="business">Business</option>
-                <option value="finance">Finance</option>
-              </select>
-            </div>
+        <div className="col-lg-12">
+          <div className='Prof'>
+            <div className="row justify-content-center">
+              <div className="col-lg-4 mb-4">
+                <label htmlFor="classType">{t('Class Type:')}</label>
+                <select
+                  id="classType"
+                  value={classType}
+                  onChange={handleClassTypeChange}
+                  className="form-select"
+                >
+                  <option value="">{t('Select a class type')}</option>
+                  <option value="IT">{t('IT')}</option>
+                  <option value="business">{t('business')}</option>
+                  <option value="finance">{t('finance')}</option>
+                </select>
+              </div>
 
-            <div>
-              <label htmlFor="language">Professor Language:</label>
-              <select
-                id="language"
-                value={language}
-                onChange={handleLanguageChange}
-                className="form-select"
-              >
-                <option value="">Select a language</option>
-                <option value="english">English</option>
-                <option value="french">French</option>
-              </select>
+              <div className="col-lg-4 mb-4">
+                <label htmlFor="language">{t('Professor Language:')}</label>
+                <select
+                  id="language"
+                  value={language}
+                  onChange={handleLanguageChange}
+                  className="form-select"
+                >
+                  <option value="">{t('Select a language')}</option>
+                  <option value="english">{t('English')}</option>
+                  <option value="french">{t('French')}</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="row justify-text-center mx-5">
+        <div className="row justify-content  mx-5">
           {filteredProfessors.map((professor, index) => (
             <div className="col-lg-4 mb-4" key={index}>
               <div className="card" style={{ width: '90%' }}>
-                <img src={professor.image} className="card-img-top" alt="image" height="400" />
+                <img src={professor.image} className="card img" alt="image"   />
                 <div className="card-body">
                   <h5 className="card-title text-center">{professor.name}</h5>
-                  <p className="card-text">{professor.description}</p>
+                  <p className="card-text">{t(professor.description)}</p>
                   <Link to="/Booking" className="btn btn-primary">
-                    Start Now!
+                    {t('Start Now!')}
                   </Link>
                 </div>
               </div>
@@ -133,4 +137,4 @@ const Filter = () => {
   );
 };
 
-export default Filter;
+export default Prof;

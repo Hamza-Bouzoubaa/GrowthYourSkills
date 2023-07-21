@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const BookingForm = () => {
   const [step, setStep] = useState(1);
@@ -8,33 +8,45 @@ const BookingForm = () => {
   const [age, setAge] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [bookingConfirmed, setBookingConfirmed] = useState(false);
+  const navigate = useNavigate();
 
   const handleNextStep = () => {
+    if (step === 1) {
+      // Validate inputs for Step 1
+      if (!name.trim() || !email.trim() || !age) {
+        alert('Please fill in all the fields.');
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+    } else if (step === 2) {
+      // Validate inputs for Step 2
+      if (!selectedDate) {
+        alert('Please select a date.');
+        return;
+      }
+    }
+
     setStep(step + 1);
   };
 
-  const handlePreviousStep = () => {
-    setStep(step - 1);
+  const validateEmail = (email) => {
+    // Very basic email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleAgeChange = (e) => {
-    setAge(e.target.value);
-  };
-
-  const handleDateChange = (e) => {
-    setSelectedDate(e.target.value);
-  };
-
-  const handleTermsChange = (e) => {
-    setTermsAccepted(e.target.checked);
+  const handleBookingConfirmation = () => {
+    // Set the bookingConfirmed state to true
+    setBookingConfirmed(true);
+    // Redirect to the main page after 3 seconds (adjust the delay as needed)
+    setTimeout(() => {
+      navigate('/');
+    }, 3000);
   };
 
   const renderProgressBar = () => {
@@ -55,7 +67,7 @@ const BookingForm = () => {
             type="text"
             className="form-control"
             value={name}
-            onChange={handleNameChange}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className="form-group">
@@ -64,7 +76,7 @@ const BookingForm = () => {
             type="email"
             className="form-control"
             value={email}
-            onChange={handleEmailChange}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="form-group">
@@ -73,7 +85,7 @@ const BookingForm = () => {
             type="number"
             className="form-control"
             value={age}
-            onChange={handleAgeChange}
+            onChange={(e) => setAge(e.target.value)}
           />
         </div>
         <button className="btn btn-primary" onClick={handleNextStep}>Next</button>
@@ -91,10 +103,10 @@ const BookingForm = () => {
             type="date"
             className="form-control"
             value={selectedDate}
-            onChange={handleDateChange}
+            onChange={(e) => setSelectedDate(e.target.value)}
           />
         </div>
-        <button className="btn btn-secondary mr-2" onClick={handlePreviousStep}>Previous</button>
+        <button className="btn btn-secondary mr-2" onClick={() => setStep(step - 1)}>Previous</button>
         <button className="btn btn-primary" onClick={handleNextStep}>Next</button>
       </div>
     );
@@ -109,15 +121,28 @@ const BookingForm = () => {
             type="checkbox"
             className="form-check-input"
             checked={termsAccepted}
-            onChange={handleTermsChange}
+            onChange={(e) => setTermsAccepted(e.target.checked)}
           />
           <label className="form-check-label">I accept the terms and conditions.</label>
         </div>
-        <button className="btn btn-secondary mr-2" onClick={handlePreviousStep}>Previous</button>
-        <Link to="/" className={`btn btn-primary ${!termsAccepted ? 'disabled' : ''}`}>
-  Book Now
-</Link>
+        <button className="btn btn-secondary mr-2" onClick={() => setStep(step - 1)}>Previous</button>
+        {/* Show the confirmation message after accepting terms and conditions */}
+        <button
+          className={`btn btn-primary ${!termsAccepted ? 'disabled' : ''}`}
+          onClick={handleBookingConfirmation}
+        >
+          Book Now
+        </button>
+        {bookingConfirmed && renderConfirmationMessage()}
+      </div>
+    );
+  };
 
+  const renderConfirmationMessage = () => {
+    return (
+      <div className="confirmation-message">
+        <h2>Booking Confirmed!</h2>
+        <p>Your booking has been confirmed. You will be redirected to the main page shortly.</p>
       </div>
     );
   };

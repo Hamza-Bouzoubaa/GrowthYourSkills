@@ -1,8 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer bg-black text-white mt-5">
       <div className="container">
@@ -14,22 +17,28 @@ function Footer() {
           </div>
           <div className="col-md-8 text-center">
             <Link to="/Prof" className="nav-link text-white d-block mb-0">
-              Find a mentor
+              {t('mentor.button')}
             </Link>
             <Link to="/HowItWorks" className="nav-link text-white d-block mb-0">
-              How it works
+              {t('navbar.howItWorks')}
             </Link>
             <Link to="/Cours" className="nav-link text-white d-block mb-0">
-              Our courses
+              {t('navbar.ourCourses')}
             </Link>
           </div>
           <div className="col-md-3 text-right">
-            <p>123 Main Street<br />City, State ZIP<br />Phone: 555-555-5555<br />Email: info@example.com</p>
+            <p>
+              {t('footer.address')}<br />
+              {t('footer.cityStateZIP')}<br />
+              {t('footer.phone')}<br />
+              {t('footer.email')}
+            </p>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+
 
 export default Footer;

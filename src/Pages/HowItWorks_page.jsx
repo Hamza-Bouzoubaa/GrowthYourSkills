@@ -12,7 +12,7 @@ function Cours_page() {
       
       <HowItWorks/>
       
-
+      
       <Footer/>
     
       

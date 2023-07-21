@@ -8,6 +8,17 @@
   
 }
 
+.section-text3 {
+  color: #FFF;
+  text-align: center;
+  margin: 25px;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 20px;
+  font-family: Playfair Display;
+  font-weight: 700;
+  
+}
 .center-image {
   display: flex;
   justify-content: center;
@@ -25,11 +36,49 @@
   
 }
 
+.section2{
+  max-width: 80%;
+  margin: auto;
+
+
+}
+.center-image {
+  display: flex;
+  justify-content: center;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.step-number {
+  font-size: 48px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.step-number-big {
+  font-size: 72px;
+}
+.step-title {
+  margin-top: 0;
+}
+
+.step-description {
+  margin-bottom: 0;
+}
 
 
 .section-container{
     
-  background-color: rgba(0, 28, 53, 100);
+  background-color: rgb(13, 83, 146);
 }
 
 body {

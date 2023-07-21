@@ -9,3 +9,52 @@
     transform: scale(1.1);
   }
   
+
+
+/* Chat.css */
+
+/* Styling for the chatbot container */
+.custom-chatbot-container {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin-left: auto;
+}
+
+/* Styling for chatbot messages */
+.custom-chatbot-message {
+  background-color: #376B7E;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* Styling for user input message */
+.custom-user-message {
+  background-color: #ccc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* Styling for chat input field */
+.custom-chat-input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+}
+
+/* Styling for chat submit button */
+.custom-chat-submit {
+  background-color: #376B7E;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
