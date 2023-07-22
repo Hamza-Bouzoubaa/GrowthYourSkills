@@ -1,6 +1,7 @@
 import './Chat.css';
 import React, { useState } from 'react';
 import CustomChatbot from './Chatbot'; // Import the CustomChatbot component
+import chatImage from './Images/Chat.svg'
 
 function Chat() {
   const [showChatbot, setShowChatbot] = useState(false);
@@ -14,9 +15,9 @@ function Chat() {
       {showChatbot && <CustomChatbot />}
       <div className="d-flex justify-content-end">
         <div className="chat-image">
-          <a href="#" onClick={handleImageClick}>
+          <a  onClick={handleImageClick}>
             <img
-              src={process.env.PUBLIC_URL + "/chat.svg"}
+              src={chatImage}
               alt="Chat"
               height="60"
               width="60"

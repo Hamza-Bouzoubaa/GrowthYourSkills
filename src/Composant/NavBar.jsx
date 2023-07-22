@@ -4,6 +4,7 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { NavDropdown } from 'react-bootstrap';
 import { Trans, useTranslation } from 'react-i18next';
+import logo from './Images/Logo.png'
 
 function Navbar() {
   const { t, i18n } = useTranslation();
@@ -15,7 +16,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black">
       <Link className="navbar-brand mx-3" to="/GrowthYourSkills">
-        <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" height="50" width="142" />
+        <img src={logo} alt="Logo" height="50" width="142" />
       </Link>
       <button
         className="navbar-toggler"

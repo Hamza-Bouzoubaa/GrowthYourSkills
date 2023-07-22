@@ -2,6 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import logo from '../src/Composant/Images/Logo.png'
+
 
 function Footer() {
   const { t } = useTranslation();
@@ -12,7 +14,7 @@ function Footer() {
         <div className="row align-items-center">
           <div className="col-md-1 text-left">
             <Link className="navbar-brand text-white mr-3" to="/">
-              <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" height="50" width="142" />
+              <img src={logo} alt="Logo" height="50" width="142" />
             </Link>
           </div>
           <div className="col-md-8 text-center">
