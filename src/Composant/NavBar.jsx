@@ -14,7 +14,7 @@ function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black">
-      <Link className="navbar-brand mx-3" to="/">
+      <Link className="navbar-brand mx-3" to="/GrowthYourSkills">
         <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" height="50" width="142" />
       </Link>
       <button
@@ -31,17 +31,17 @@ function Navbar() {
       <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link to="/Prof" className="nav-link text-white">
+            <Link to="/GrowthYourSkills/Prof" className="nav-link text-white">
               <Trans i18nKey="mentor.button" />
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/HowItWorks" className="nav-link text-white">
+            <Link to="/GrowthYourSkills/HowItWorks" className="nav-link text-white">
               {t('navbar.howItWorks')}
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/Cours" className="nav-link text-white">
+            <Link to="/GrowthYourSkills/Cours" className="nav-link text-white">
               {t('navbar.ourCourses')}
             </Link>
           </li>

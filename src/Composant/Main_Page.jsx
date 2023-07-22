@@ -56,7 +56,7 @@ function Main_Page() {
       </div>
 
       <div className="center-image mt-5">
-        <Link to="/Cours">
+        <Link to="/GrowthYourSkills/Cours">
           <button className="btn btn-primary">{t('mainPage.startNow')}</button>
         </Link>
       </div>

@@ -16,13 +16,13 @@ function Footer() {
             </Link>
           </div>
           <div className="col-md-8 text-center">
-            <Link to="/Prof" className="nav-link text-white d-block mb-0">
+            <Link to="/GrowthYourSkills/Prof" className="nav-link text-white d-block mb-0">
               {t('mentor.button')}
             </Link>
-            <Link to="/HowItWorks" className="nav-link text-white d-block mb-0">
+            <Link to="/GrowthYourSkills/HowItWorks" className="nav-link text-white d-block mb-0">
               {t('navbar.howItWorks')}
             </Link>
-            <Link to="/Cours" className="nav-link text-white d-block mb-0">
+            <Link to="/GrowthYourSkills/Cours" className="nav-link text-white d-block mb-0">
               {t('navbar.ourCourses')}
             </Link>
           </div>

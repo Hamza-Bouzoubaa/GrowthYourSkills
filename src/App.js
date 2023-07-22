@@ -16,11 +16,11 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/GrowthYourSkillsReact" element={<Home />} />
-        <Route path="/Booking" element={<BookingPage />} />
-        <Route path="/Cours" element={<Cours_page />} />
-        <Route path="/Prof" element={<Prof_page />} />
-        <Route path="/HowItWorks" element={<HowItWorks_page />} />
+        <Route path="/GrowthYourSkills" element={<Home />} />
+        <Route path="/GrowthYourSkills/Booking" element={<BookingPage />} />
+        <Route path="/GrowthYourSkills/Cours" element={<Cours_page />} />
+        <Route path="/GrowthYourSkills/Prof" element={<Prof_page />} />
+        <Route path="/GrowthYourSkills/HowItWorks" element={<HowItWorks_page />} />
       </Routes>
     </div>
   );

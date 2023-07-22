@@ -123,7 +123,7 @@ const Prof = () => {
                 <div className="card-body">
                   <h5 className="card-title text-center">{professor.name}</h5>
                   <p className="card-text">{t(professor.description)}</p>
-                  <Link to="/Booking" className="btn btn-primary">
+                  <Link to="/GrowthYourSkills/Booking" className="btn btn-primary">
                     {t('Start Now!')}
                   </Link>
                 </div>

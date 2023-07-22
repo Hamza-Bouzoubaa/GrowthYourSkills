@@ -45,7 +45,7 @@ const BookingForm = () => {
     setBookingConfirmed(true);
     // Redirect to the main page after 3 seconds (adjust the delay as needed)
     setTimeout(() => {
-      navigate('/');
+      navigate('/GrowthYourSkills');
     }, 3000);
   };
 
