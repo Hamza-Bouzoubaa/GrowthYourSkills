@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/GrowthYourSkills/static/css/main.5f7d77cb.css",
-    "main.js": "/GrowthYourSkills/static/js/main.460557bc.js",
+    "main.css": "/GrowthYourSkills/static/css/main.eb89d24e.css",
+    "main.js": "/GrowthYourSkills/static/js/main.86fccf56.js",
     "static/js/787.899d88f8.chunk.js": "/GrowthYourSkills/static/js/787.899d88f8.chunk.js",
     "static/media/Logo.png": "/GrowthYourSkills/static/media/Logo.123483a596b49d8e500a.png",
+    "static/media/slick.svg": "/GrowthYourSkills/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/GrowthYourSkills/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/GrowthYourSkills/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/GrowthYourSkills/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/GrowthYourSkills/index.html",
     "static/media/Chat.svg": "/GrowthYourSkills/static/media/Chat.9d6f3d0eea000ec85375f435dd5aa2dc.svg",
-    "main.5f7d77cb.css.map": "/GrowthYourSkills/static/css/main.5f7d77cb.css.map",
-    "main.460557bc.js.map": "/GrowthYourSkills/static/js/main.460557bc.js.map",
+    "main.eb89d24e.css.map": "/GrowthYourSkills/static/css/main.eb89d24e.css.map",
+    "main.86fccf56.js.map": "/GrowthYourSkills/static/js/main.86fccf56.js.map",
     "787.899d88f8.chunk.js.map": "/GrowthYourSkills/static/js/787.899d88f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f7d77cb.css",
-    "static/js/main.460557bc.js"
+    "static/css/main.eb89d24e.css",
+    "static/js/main.86fccf56.js"
   ]
 }
