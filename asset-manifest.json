@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/GrowthYourSkills/static/css/main.322af4b6.css",
+    "main.css": "/GrowthYourSkills/static/css/main.5f7d77cb.css",
     "main.js": "/GrowthYourSkills/static/js/main.460557bc.js",
     "static/js/787.899d88f8.chunk.js": "/GrowthYourSkills/static/js/787.899d88f8.chunk.js",
     "static/media/Logo.png": "/GrowthYourSkills/static/media/Logo.123483a596b49d8e500a.png",
     "index.html": "/GrowthYourSkills/index.html",
     "static/media/Chat.svg": "/GrowthYourSkills/static/media/Chat.9d6f3d0eea000ec85375f435dd5aa2dc.svg",
-    "main.322af4b6.css.map": "/GrowthYourSkills/static/css/main.322af4b6.css.map",
+    "main.5f7d77cb.css.map": "/GrowthYourSkills/static/css/main.5f7d77cb.css.map",
     "main.460557bc.js.map": "/GrowthYourSkills/static/js/main.460557bc.js.map",
     "787.899d88f8.chunk.js.map": "/GrowthYourSkills/static/js/787.899d88f8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.322af4b6.css",
+    "static/css/main.5f7d77cb.css",
     "static/js/main.460557bc.js"
   ]
 }
