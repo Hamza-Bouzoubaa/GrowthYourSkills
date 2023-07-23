@@ -28,7 +28,7 @@ function Footer() {
               {t('navbar.ourCourses')}
             </Link>
           </div>
-          <div className="col-md-3 text-right">
+          <div className="col-md-3 text-right text-white">
             <p>
               {t('footer.address')}<br />
               {t('footer.cityStateZIP')}<br />

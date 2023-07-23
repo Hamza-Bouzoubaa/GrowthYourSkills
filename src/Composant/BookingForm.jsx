@@ -106,8 +106,8 @@ const BookingForm = () => {
             onChange={(e) => setSelectedDate(e.target.value)}
           />
         </div>
-        <button className="btn btn-secondary mr-2" onClick={() => setStep(step - 1)}>Previous</button>
-        <button className="btn btn-primary" onClick={handleNextStep}>Next</button>
+        <button id="Next" className="btn btn-secondary mr-2" onClick={() => setStep(step - 1)}>Previous</button>
+        <button id="Next" className="btn btn-primary" onClick={handleNextStep}>Next</button>
       </div>
     );
   };

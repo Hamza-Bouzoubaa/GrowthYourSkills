@@ -12,9 +12,7 @@ function BookingPage() {
       <Navbar/>
       
       <BookingForm/>
-      <div className="space"></div>
 
-      <Footer/>
     
       
       

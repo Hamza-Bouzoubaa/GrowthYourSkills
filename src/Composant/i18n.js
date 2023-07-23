@@ -80,10 +80,21 @@ i18n
           'howItWorks.step11Title': '11. Alumni Engagement',
           'howItWorks.step11Description':
             'After completing the mentorship program, participants may become mentors themselves or actively engage with the program\'s alumni network. They can share their experiences, provide guidance to new participants, and contribute to the continuous growth of the mentorship community.',
+            'testimonial_slider.reviews_title' :'Reviews',
+            'testimonial_slider.title' : 'What our customers think of our Mentorship Program',
+            'testimonial_slider.rating' : 'Rating',
+
+
         },
       },
       fr: {
         translation: {
+          'testimonial_slider.reviews_title' :'Avis',
+          'testimonial_slider.title' : 'Ce que nos clients pensent de notre programme',
+          'testimonial_slider.rating' : 'Note',
+
+
+
           "Find your prof": "Trouvez votre prof",
           "Class Type:": "Type de classe :",
           "Select a class type": "Sélectionnez un type de classe",

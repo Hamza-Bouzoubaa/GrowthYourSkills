@@ -3,6 +3,7 @@ import React from 'react';
 import Footer from '../Footer';
 import Navbar from '../Composant/NavBar';
 import Main_Page from '../Composant/Main_Page';
+import Testimonial from '../Composant/testimonialslider/TestimonialSlider.jsx'
 
 function Cours_page() {
   return (
@@ -10,6 +11,7 @@ function Cours_page() {
       <Navbar/>
       
       <Main_Page/>
+      <Testimonial/>
       
 
       <Footer/>
